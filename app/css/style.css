@@ -1,3 +1,23 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: salmon; }
+.font-x-small {
+  font-size: 0.8rem; }
+
+.font-small {
+  font-size: 0.9rem; }
+
+.font-big {
+  font-size: 1.5rem; }
+
+.font-huge {
+  font-size: 2rem; }
+
+.header {
+  color: red; }
+  @media (min-width: 800px) {
+    .header {
+      color: blue; } }
+  @media (min-width: 1000px) {
+    .header {
+      color: salmon; } }
+  @media (min-width: 1200px) {
+    .header {
+      color: olive; } }

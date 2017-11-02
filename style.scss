@@ -1,0 +1,24 @@
+@import "./utils/_color",
+        "./utils/_mixins";
+@import "./base/_typography",
+        "./base/_reset";
+@import "./layout/_grid";
+@import "./components/_store-warehouse-content",
+        "./components/_status",
+        "./components/_tooltip",
+        "./components/_button",
+        "./components/_modal",
+        "./pages/_screen-add-store",
+        "./pages/_store-warehouse";
+
+body {
+  overflow-y: hidden;
+}
+
+.content {
+  padding: 25px;
+}
+
+.filter {
+  filter: blur(5px);
+}

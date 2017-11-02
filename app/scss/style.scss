@@ -1,7 +1,4 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: salmon;
+@import "./_utils/_color",
+        "./_utils/_typography.scss";
+@import "./_layout/_header.scss";
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}

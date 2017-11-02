@@ -1,0 +1,15 @@
+.header {
+    color: red;
+    
+    @include respond-to('medium') {
+        color: blue;
+    }
+
+    @include respond-to('large') {
+        color: salmon;
+    }
+
+    @include respond-to('huge') {
+        color: olive;
+    }
+}

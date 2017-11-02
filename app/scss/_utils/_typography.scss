@@ -1,0 +1,53 @@
+ $fontsize: (
+    "x-small": .8,
+    "small": .9,
+    "big": 1.5,
+    "huge": 2,
+  );
+
+  @each $key-a, $value-a in $fontsize {
+    .font-#{$key-a} {
+      font-size: $value-a * 1rem;
+    }
+  }
+
+  @function f($value-a) {
+    @return map-get($fontsize, $value-a) * 1rem;
+  }
+  
+//////////////////////
+//////////////////////
+//////////////////////
+
+// breakpoints
+$breakpoints: (
+    'medium': '(min-width: 800px)',
+    'large': '(min-width: 1000px)',
+    'huge': '(min-width: 1200px)'
+);
+
+//breakpoint map
+
+@mixin respond-to($key) {
+    $value: map-get($breakpoints, $key);
+
+    @if $value {
+      
+  
+      @media #{unquote($value)} {
+        @content;
+        //
+      }
+      //@each $key-a, $value-a in $fontsize {
+        //.font-#{$key-a} {
+          //font-size: $value-a * 2rem;
+        //}
+      //}
+    } @else {
+      @error 'No se ha encontrado un valor para `#{$key}`. '
+           + 'Por favor, asegúrate que está definido en el mapa `$breakpoints`.';
+    }
+  }
+
+
+ 
