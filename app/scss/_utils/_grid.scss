@@ -1,0 +1,87 @@
+// breakpoints
+$breakpoints: (
+    'medium': '(min-width: 800px)',
+    'large': '(min-width: 1000px)',
+    'huge': '(min-width: 1200px)'
+);
+
+//breakpoint map
+
+@mixin respond-to($key) {
+    $value: map-get($breakpoints, $key);
+
+    @if $value {
+      
+
+      @media #{unquote($value)} {
+        @content;
+        
+      }
+
+    } @else {
+      @error 'No se ha encontrado un valor para `#{$key}`. '
+           + 'Por favor, asegúrate que está definido en el mapa `$breakpoints`.';
+    }
+  }
+
+///////////////////////////////
+///////////////////////////////
+///////////////////////////////
+
+
+@mixin container {
+    display: grid;
+    grid-template-rows: 5.0rem 1fr 5.0rem;
+    grid-template-columns:1fr;
+    grid-template-areas: "header"
+                        "content"
+                        "footer";
+
+    .header {
+        grid-area: header;
+        background-color: lightsalmon;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .container-content {
+        grid-area: content;
+        background-color: lightgreen;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: lightskyblue;
+    }
+}
+
+@mixin container-sizel {
+    display: grid;
+    grid-template-rows: 5.0rem 1fr 5.0rem;
+    grid-template-columns: 30.0rem 1fr;
+    grid-template-areas: "header header"
+                        "aside content"
+                        "footer footer";
+
+    .header {
+        grid-area: header;
+        background-color: mediumturquoise;
+    }
+
+    .aside {
+        visibility: hidden;
+        grid-area: aside;
+        background-color: salmon;
+    }
+
+    .container-content {
+        grid-area: content;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: orange;
+    }
+}

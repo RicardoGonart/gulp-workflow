@@ -1,53 +1,41 @@
+// Mapa de variables de tamaños
+
+html {
+  font-size: 62.5%;
+}
+
  $fontsize: (
-    "x-small": .8,
-    "small": .9,
-    "big": 1.5,
-    "huge": 2,
+    "font-xs": .8,
+    "font-s": 1.2,
+    "font-m": 1.6,
+    "font-l": 2.4,
+    "font-xl": 3.2,
+    "font-xxl": 4.8,
   );
 
-  @each $key-a, $value-a in $fontsize {
-    .font-#{$key-a} {
-      font-size: $value-a * 1rem;
+// Selectors de clases basado en la variable
+
+  @each $size, $value-size in $fontsize {
+    .#{$size} {
+      font-size: $value-size * 1rem;
     }
   }
 
-  @function f($value-a) {
-    @return map-get($fontsize, $value-a) * 1rem;
+// función para definir tamaños en selectores.
+
+  @function f($value-size) {
+    @return map-get($fontsize, $value-size) * 1rem;
   }
-  
-//////////////////////
-//////////////////////
-//////////////////////
 
-// breakpoints
-$breakpoints: (
-    'medium': '(min-width: 800px)',
-    'large': '(min-width: 1000px)',
-    'huge': '(min-width: 1200px)'
-);
 
-//breakpoint map
+// Tamaño personalizado
 
-@mixin respond-to($key) {
-    $value: map-get($breakpoints, $key);
-
-    @if $value {
-      
-  
-      @media #{unquote($value)} {
-        @content;
-        //
-      }
-      //@each $key-a, $value-a in $fontsize {
-        //.font-#{$key-a} {
-          //font-size: $value-a * 2rem;
-        //}
-      //}
-    } @else {
-      @error 'No se ha encontrado un valor para `#{$key}`. '
-           + 'Por favor, asegúrate que está definido en el mapa `$breakpoints`.';
+  @mixin font ($fontSize, $fontWeight) {
+    font: {
+        family: 'Open Sans', sans-serif;
+        size: $fontSize;
+        weight: $fontWeight;
     }
   }
-
 
  

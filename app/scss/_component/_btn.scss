@@ -1,0 +1,30 @@
+.btn-nav {
+    align-items: center;
+    background-color: lighten($primary-red, 10%);
+    color: $primary-red;
+    cursor: pointer;
+    display: flex;
+    font-size: f('font-s');
+    height: 5.0rem;
+    justify-content: center;
+    width: 5.0rem;
+
+    &:hover {
+        background-color: darken($primary-red, 10%);
+    }
+
+    @include respond-to('medium') {
+        color: lighten($primary-red, 20%);
+        font-size: f('font-m');
+    }
+
+    @include respond-to('large') {
+        color: lighten($primary-red, 30%);
+        font-size: f('font-l');
+    }
+
+    @include respond-to('huge') {
+        color: lighten($primary-red, 40%);
+        font-size: f('font-xl');
+    }
+}

@@ -1,15 +1,13 @@
 .header {
-    color: red;
-    
-    @include respond-to('medium') {
-        color: blue;
-    }
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-    @include respond-to('large') {
-        color: salmon;
-    }
-
-    @include respond-to('huge') {
-        color: olive;
+    .tools {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;   
     }
 }
+
+
