@@ -1,8 +1,10 @@
+@import "./_base/_reset.scss";
 @import "./_utils/_color",
         "./_utils/_typography.scss",
         "./_utils/_grid.scss";
 @import "./_layout/_header.scss";
-@import "./_base/_reset.scss";
+
 @import "./_pages/_home.scss";
-@import "./_component/_btn.scss";
+@import "./_component/_btn.scss",
+        "./_component/_tools.scss";
 

@@ -1,33 +1,3 @@
-html {
-  font-size: 62.5%; }
-
-.font-xs {
-  font-size: 0.8rem; }
-
-.font-s {
-  font-size: 1.2rem; }
-
-.font-m {
-  font-size: 1.6rem; }
-
-.font-l {
-  font-size: 2.4rem; }
-
-.font-xl {
-  font-size: 3.2rem; }
-
-.font-xxl {
-  font-size: 4.8rem; }
-
-.header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between; }
-  .header .tools {
-    align-items: center;
-    display: flex;
-    justify-content: space-between; }
-
 @-webkit-viewport {
   width: device-width; }
 
@@ -278,9 +248,39 @@ textarea {
   vertical-align: middle;
   /* 2 */ }
 
+html {
+  font-size: 62.5%; }
+
+.font-xs {
+  font-size: 0.8rem; }
+
+.font-s {
+  font-size: 1.2rem; }
+
+.font-m {
+  font-size: 1.6rem; }
+
+.font-l {
+  font-size: 2.4rem; }
+
+.font-xl {
+  font-size: 3.2rem; }
+
+.font-xxl {
+  font-size: 4.8rem; }
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+  .header .tools {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+
 .container {
   display: grid;
-  grid-template-rows: 5.0rem 1fr 5.0rem;
+  grid-template-rows: 3.0rem 1fr 3.0rem;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "content" "footer";
   height: 100vh; }
@@ -300,8 +300,7 @@ textarea {
       display: grid;
       grid-template-rows: 5.0rem 1fr 5.0rem;
       grid-template-columns: 30.0rem 1fr;
-      grid-template-areas: "header header" "aside content" "footer footer";
-      height: 100vh; }
+      grid-template-areas: "header header" "aside content" "footer footer"; }
       .container .header {
         grid-area: header;
         background-color: mediumturquoise; }
@@ -322,20 +321,34 @@ textarea {
   cursor: pointer;
   display: flex;
   font-size: 1.2rem;
-  height: 5.0rem;
+  height: 3.0rem;
   justify-content: center;
-  width: 5.0rem; }
+  width: 3.0rem; }
   .btn-nav:hover {
     background-color: #d81d3f; }
   @media (min-width: 800px) {
     .btn-nav {
       color: #f29cac;
-      font-size: 1.6rem; } }
+      height: 5.0rem;
+      width: 5.0rem; } }
   @media (min-width: 1000px) {
     .btn-nav {
-      color: #f8c9d2;
-      font-size: 2.4rem; } }
+      color: #f8c9d2; } }
   @media (min-width: 1200px) {
     .btn-nav {
-      color: #fef6f8;
-      font-size: 3.2rem; } }
+      color: #fef6f8; } }
+
+.tools {
+  align-items: center;
+  background-color: #9adade;
+  display: flex;
+  font-size: 1.2rem;
+  height: 3.0rem;
+  justify-content: center;
+  width: 15.0rem; }
+  .tools__item {
+    align-items: center;
+    display: flex;
+    height: 3.0em;
+    justify-content: center;
+    width: 5.0em; }

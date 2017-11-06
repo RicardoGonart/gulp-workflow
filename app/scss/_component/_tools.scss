@@ -1,0 +1,17 @@
+.tools {
+    align-items: center;
+    background-color: lighten($primary-blue, 10%);
+    display: flex;
+    font-size: f('font-s');
+    height: 3.0rem;
+    justify-content: center;
+    width: 15.0rem;
+
+    &__item {
+        align-items: center;
+        display: flex;
+        height: 3.0em;
+        justify-content: center;
+        width: 5.0em;
+    }
+}

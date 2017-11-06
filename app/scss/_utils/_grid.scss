@@ -31,7 +31,7 @@ $breakpoints: (
 
 @mixin container {
     display: grid;
-    grid-template-rows: 5.0rem 1fr 5.0rem;
+    grid-template-rows: 3.0rem 1fr 3.0rem;
     grid-template-columns:1fr;
     grid-template-areas: "header"
                         "content"

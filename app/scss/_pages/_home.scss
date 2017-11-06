@@ -1,9 +1,8 @@
 .container {
     @include container;
     height: 100vh;
-
+    
     @include respond-to('medium') {
         @include container-sizel;
-        height: 100vh;
     }
 }

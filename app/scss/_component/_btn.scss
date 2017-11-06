@@ -5,9 +5,9 @@
     cursor: pointer;
     display: flex;
     font-size: f('font-s');
-    height: 5.0rem;
+    height: 3.0rem;
     justify-content: center;
-    width: 5.0rem;
+    width: 3.0rem;
 
     &:hover {
         background-color: darken($primary-red, 10%);
@@ -15,16 +15,16 @@
 
     @include respond-to('medium') {
         color: lighten($primary-red, 20%);
-        font-size: f('font-m');
+        height: 5.0rem;
+        width: 5.0rem;
+        
     }
 
     @include respond-to('large') {
         color: lighten($primary-red, 30%);
-        font-size: f('font-l');
     }
 
     @include respond-to('huge') {
         color: lighten($primary-red, 40%);
-        font-size: f('font-xl');
     }
 }
